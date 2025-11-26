@@ -1,7 +1,7 @@
 # Willamette Loading Study - Cougar Dam Analysis
 
 ![R](https://img.shields.io/badge/R-276DC3?logo=r&logoColor=white)
-![GitHub last commit](https://img.shields.io/github/last-commit/danmcgraw94/Williamette_Loading)
+![GitHub last commit](https://img.shields.io/github/last-commit/danmcgraw94/williamette-loading)
 ![Status](https://img.shields.io/badge/status-2025%20Report-blue)
 
 ## License and Disclaimer
