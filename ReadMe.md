@@ -255,68 +255,133 @@ daniel.e.mcgraw@usace.army.mil
 Note recursive branches are shown selectively:
 
 Williamette_Loading/
+
 ├── data/
+
 │   ├── Cougar/                      # Cougar Dam-specific data
+
 │   │   ├── BestFit/                 # RMC Best-Fit input data
+
 │   │   ├── Crit_Duration/           # Critical duration storm events
+
 │   │   ├── Inflow_Data/             # Systematic inflow records
+
 │   │   ├── Operations/              # Guide curves, flood levels, reservoir stats
+
 │   │   ├── Peak_to_Vol/             # Peak flow to volume transformations
+
 │   │   ├── Precip_Freq/             # Precipitation-frequency analysis
+
 │   │   │   └── RRFT/                # RRFT results and HMS models
+
 │   │   │       ├── HMS/             # HEC-HMS model files
+
 │   │   │       ├── Precip_Quantiles/  # Bootstrap quantiles (0.1%-10% AEP)
+
 │   │   │       ├── RRFT_Results/    # Final volume-frequency results
+
 │   │   │       └── Spreadsheet_Calcs/  # Upper/lower bounds
+
 │   │   ├── RFA/                     # Regional Frequency Analysis
+
 │   │   ├── Res_Model/               # Reservoir routing models
+
 │   │   └── Stage_Data/              # Historical stage records and AMS
+
 │   │
+
 │   ├── NWP/                         # Portland District data
+
 │   │   ├── BiOp/                    # Biological Opinion operations
+
 │   │   ├── Reservoir_Data/          # System-wide Willamette operations info
+
 │   │   └── Stage_POR/               # Period of record stage (hourly/daily)
+
 │   │
+
 │   ├── Climate/                     # PRISM climate normals (1991-2020)
+
 │   │   └── Normals/
+
 │   │
+
 │   └── GIS/                         # Geospatial data
+
 │       ├── PRISM/                   # Climate rasters (precipitation, temperature)
+
 │       └── *.shp                    # Basin boundaries and dam locations
+
 │
+
 ├── R_scripts/                       # Active analysis scripts
+
 │   ├── CGR_Packages.R               # Package dependencies
+
 │   ├── CGR_Systematic Data Sources.R  # Data import
+
 │   ├── CGR_peak_to_vol.R            # Peak-volume transformations
+
 │   ├── CGR_Crit_Duration.R          # Critical duration analysis
+
 │   ├── CGR_Seasonality.R            # Flood seasonality
+
 │   ├── CGR_Stage_Duration.R         # Stage duration curves
+
 │   ├── CGR_VFA_Input_Plots.R        # Volume frequency visualizations
+
 │   ├── CGR_PrecipFreq.R             # Precipitation-frequency analysis
+
 │   ├── CGR_Guide_Curve.R            # Operational guide curves
+
 │   ├── CGR_Elev_Stor.R              # Elevation-storage relationships
+
 │   ├── CGR_Res_Model.R              # Reservoir routing models
+
 │   ├── RRFT_Results.Rmd             # RRFT documentation (R Markdown)
+
 │   ├── Stage_data_POR_and_BiOps.R   # POR stage processing
+
 │   └── Willamette_Climate_Normals.R # Climate normal processing
+
 │
+
 ├── archive_scripts/                 # Legacy scripts (Summer 2023)
+
 │   └── JMD_Examples/                # Reference examples from previous analyses
+
 │
+
 ├── outputs/
+
 │   ├── Figures/                     # Publication-ready figures
+
 │   │   ├── Critical_Duration/
+
 │   │   ├── Operations/
+
 │   │   ├── Peak_to_Vol/
+
 │   │   ├── PF/                      # Precipitation-frequency
+
 │   │   ├── ResModel/
+
 │   │   ├── Seasonality/
+
 │   │   ├── Stage_Duration/
+
 │   │   ├── Stage_POR/
+
 │   │   ├── Systematic Inflow/
+
 │   │   └── Volume_Frequency/
+
 │   │
+
 │   └── Stage_POR/                   # Processed stage data (CSV)
+
 │
+
 ├── Williamette_Loading.Rproj        # R Project file
+
 └── ReadMe.md                        # Project documentation
