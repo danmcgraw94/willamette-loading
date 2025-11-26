@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RunResults>
+  <RunName>1996_Feb</RunName>
+  <Description>Basin: CGR-BLR , Meteorology: Dec1981 , Control: HL_Runs</Description>
+  <ExecutionTime>10Jun2024, 21:09:36</ExecutionTime>
+  <StartTime>31Dec2999, 24:00</StartTime>
+  <EndTime>09Jan3000, 23:00</EndTime>
+  <BasinElement name="SK02_SFk McKenzie R" type="Subbasin">
+    <ExecutionTime>10Jun2024, 21:09:36</ExecutionTime>
+    <SubbasinArea area="156.9" units="MI2" />
+    <UnitSystem>English</UnitSystem>
+    <IsComputationPoint>No</IsComputationPoint>
+    <DrainageArea area="156.9" units="MI2" />
+    <Hydrology>
+      <TimeSeries>
+        <TimeSeriesType type="Outflow" displayString="Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/FLOW//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Outflow" displayString="Cumulative Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/FLOW-CUMULATIVE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Incremental Precip" displayString="Precipitation" />
+        <DssFileName>Feb1996.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-INC//15MIN/MET:Feb1996/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Precip" displayString="Cumulative Precipitation" />
+        <DssFileName>Feb1996.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-CUM//15MIN/MET:Feb1996/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy Excess" displayString="Canopy Overflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/EXCESS-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Potential ET" displayString="Potential Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/ET-POTENTIAL//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy ET" displayString="Canopy Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/ET-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy Storage" displayString="Canopy Storage" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/STORAGE-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Air Temperature" displayString="Air Temperature" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/TEMPERATURE-AIR//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="LWASS" displayString="Liquid Water at Soil Surface" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-LWASS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative LWASS" displayString="Cumulative LWASS" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-LWASS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="SWE" displayString="Snow Water Equivalent" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/SWE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cold Content" displayString="Cold Content" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/COLD CONTENT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cold Content ATI" displayString="Cold Content ATI" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/ATI-COLD//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Melt Rate ATI" displayString="Melt Rate ATI" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/ATI-MELT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Snow Liquid Water" displayString="Liquid Water Content" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/LIQUID WATER//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Snow Accumulated Interception" displayString="Snow Accumulated Interception" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/INTERCEPTION//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Surface ET" displayString="Surface Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/ET-SURFACE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Surface Storage" displayString="Surface Storage" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/STORAGE-SURFACE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Infiltration" displayString="Soil Infiltration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/INFILTRATION//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Precip Excess" displayString="Excess Precipitation" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-EXCESS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Excess" displayString="Cumulative Excess Precipitation" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-EXCESS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Precip Loss" displayString="Precipitation Loss" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-LOSS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Loss" displayString="Cumulative Precipitation Loss" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/PRECIP-LOSS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Direct Runoff" displayString="Direct Runoff" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/FLOW-DIRECT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Baseflow" displayString="Baseflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK02_SFk McKenzie R/FLOW-BASE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+    </Hydrology>
+    <Sediment />
+    <WaterQuality />
+    <Statistics>
+      <StatisticMeasure type="Inflow Minimum" displayString="Minimum Inflow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Inflow Minimum Time" displayString="Time of Minimum Inflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Inflow Maximum" displayString="Maximum Inflow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Inflow Maximum Time" displayString="Time of Maximum Inflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Inflow Volume" displayString="Inflow Volume" value="0.0000000" units="AC-FT" />
+      <StatisticMeasure type="Inflow Depth" displayString="Inflow Depth" value="0.0000000" units="IN" />
+      <StatisticMeasure type="Inflow Average" displayString="Inflow Average" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum" displayString="Minimum Outflow" value="356.1203061" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum Time" displayString="Time of Minimum Outflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Outflow Maximum" displayString="Maximum Outflow" value="10050.3588067" units="CFS" />
+      <StatisticMeasure type="Outflow Maximum Time" displayString="Time of Maximum Outflow" value="05Jan3000, 02:15" />
+      <StatisticMeasure type="Outflow Volume" displayString="Outflow Volume" value="52917.7942650" units="AC-FT" />
+      <StatisticMeasure type="Outflow Depth" displayString="Outflow Depth" value="6.3238285" units="IN" />
+      <StatisticMeasure type="Outflow Average" displayString="Outflow Average" value="2977.0531970" units="CFS" />
+      <StatisticMeasure type="Direct Flow Minimum" displayString="Minimum Direct Flow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Direct Flow Minimum Time" displayString="Time of Minimum Direct Flow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Direct Flow Maximum" displayString="Maximum Direct Flow" value="9418.2567585" units="CFS" />
+      <StatisticMeasure type="Direct Flow Maximum Time" displayString="Time of Maximum Direct Flow" value="05Jan3000, 02:15" />
+      <StatisticMeasure type="Direct Flow Volume" displayString="Direct Flow Volume" value="36141.6760648" units="AC-FT" />
+      <StatisticMeasure type="Direct Flow Depth" displayString="Direct Flow Depth" value="4.3190341" units="IN" />
+      <StatisticMeasure type="Direct Flow Average" displayString="Direct Flow Average" value="2031.7319598" units="CFS" />
+      <StatisticMeasure type="Baseflow Minimum" displayString="Minimum Baseflow" value="109.8367589" units="CFS" />
+      <StatisticMeasure type="Baseflow Minimum Time" displayString="Time of Minimum Baseflow" value="09Jan3000, 03:45" />
+      <StatisticMeasure type="Baseflow Maximum" displayString="Maximum Baseflow" value="3687.0000531" units="CFS" />
+      <StatisticMeasure type="Baseflow Maximum Time" displayString="Time of Maximum Baseflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Baseflow Volume" displayString="Baseflow Volume" value="16776.1182002" units="AC-FT" />
+      <StatisticMeasure type="Baseflow Depth" displayString="Baseflow Depth" value="2.0047943" units="IN" />
+      <StatisticMeasure type="Baseflow Average" displayString="Baseflow Average" value="945.3212372" units="CFS" />
+      <StatisticMeasure type="Precipitation Maximum" displayString="Maximum Precipitation" value="0.0640876" units="IN" />
+      <StatisticMeasure type="Precipitation Maximum Time" displayString="Time of Maximum Precipitation" value="04Jan3000, 06:00" />
+      <StatisticMeasure type="Precipitation Total" displayString="Precipitation Total" value="9.7527096" units="IN" />
+      <StatisticMeasure type="Precipitation Volume" displayString="Precipitation Volume" value="81610.6707093" units="AC-FT" />
+      <StatisticMeasure type="Loss Maximum" displayString="Maximum Loss" value="0.0631135" units="IN" />
+      <StatisticMeasure type="Loss Maximum Time" displayString="Time of Maximum Loss" value="06Jan3000, 11:00" />
+      <StatisticMeasure type="Loss Total" displayString="Loss Total" value="7.5554021" units="IN" />
+      <StatisticMeasure type="Loss Volume" displayString="Loss Volume" value="63223.6024323" units="AC-FT" />
+      <StatisticMeasure type="Excess Maximum" displayString="Maximum Excess" value="0.0561342" units="IN" />
+      <StatisticMeasure type="Excess Maximum Time" displayString="Time of Maximum Excess" value="04Jan3000, 18:00" />
+      <StatisticMeasure type="Excess Total" displayString="Excess Total" value="4.3393410" units="IN" />
+      <StatisticMeasure type="Excess Volume" displayString="Excess Volume" value="36311.6038992" units="AC-FT" />
+      <StatisticMeasure type="LWASS Maximum" displayString="Maximum LWASS" value="0.0735744" units="IN" />
+      <StatisticMeasure type="LWASS Maximum Time" displayString="Time of Maximum LWASS" value="04Jan3000, 06:45" />
+      <StatisticMeasure type="LWASS Total" displayString="LWASS Total" value="11.8947431" units="IN" />
+      <StatisticMeasure type="LWASS Volume" displayString="LWASS Volume" value="99535.2105718" units="AC-FT" />
+      <StatisticMeasure type="SWE Maximum" displayString="Maximum SWE" value="38.3461145" units="IN" />
+      <StatisticMeasure type="SWE Maximum Time" displayString="Time of Maximum SWE" value="01Jan3000, 05:30" />
+      <StatisticMeasure type="SWE Total" displayString="SWE Total" value="38.4071716" units="IN" />
+      <StatisticMeasure type="Air Temperature Minimum" displayString="Minimum Air Temperature" value="-3.8532019" units="" />
+      <StatisticMeasure type="Air Temperature Minimum Time" displayString="Time of Minimum Air Temperature" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Air Temperature Maximum" displayString="Maximum Air Temperature" value="5.9644670" units="" />
+      <StatisticMeasure type="Air Temperature Maximum Time" displayString="Time of Maximum Air Temperature" value="06Jan3000, 09:45" />
+    </Statistics>
+  </BasinElement>
+  <BasinElement name="SK04_SFk McKenzie R" type="Subbasin">
+    <ExecutionTime>10Jun2024, 21:09:36</ExecutionTime>
+    <SubbasinArea area="47.2" units="MI2" />
+    <UnitSystem>English</UnitSystem>
+    <IsComputationPoint>No</IsComputationPoint>
+    <DrainageArea area="47.2" units="MI2" />
+    <Hydrology>
+      <TimeSeries>
+        <TimeSeriesType type="Outflow" displayString="Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/FLOW//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Outflow" displayString="Cumulative Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/FLOW-CUMULATIVE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Incremental Precip" displayString="Precipitation" />
+        <DssFileName>Feb1996.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-INC//15MIN/MET:Feb1996/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Precip" displayString="Cumulative Precipitation" />
+        <DssFileName>Feb1996.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-CUM//15MIN/MET:Feb1996/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy Excess" displayString="Canopy Overflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/EXCESS-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Potential ET" displayString="Potential Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/ET-POTENTIAL//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy ET" displayString="Canopy Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/ET-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Canopy Storage" displayString="Canopy Storage" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/STORAGE-CANOPY//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Air Temperature" displayString="Air Temperature" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/TEMPERATURE-AIR//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="LWASS" displayString="Liquid Water at Soil Surface" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-LWASS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative LWASS" displayString="Cumulative LWASS" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-LWASS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="SWE" displayString="Snow Water Equivalent" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/SWE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cold Content" displayString="Cold Content" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/COLD CONTENT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cold Content ATI" displayString="Cold Content ATI" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/ATI-COLD//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Melt Rate ATI" displayString="Melt Rate ATI" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/ATI-MELT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Snow Liquid Water" displayString="Liquid Water Content" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/LIQUID WATER//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Snow Accumulated Interception" displayString="Snow Accumulated Interception" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/INTERCEPTION//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Surface ET" displayString="Surface Evapotranspiration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/ET-SURFACE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Surface Storage" displayString="Surface Storage" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/STORAGE-SURFACE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Infiltration" displayString="Soil Infiltration" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/INFILTRATION//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Precip Excess" displayString="Excess Precipitation" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-EXCESS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Excess" displayString="Cumulative Excess Precipitation" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-EXCESS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Precip Loss" displayString="Precipitation Loss" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-LOSS//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Loss" displayString="Cumulative Precipitation Loss" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/PRECIP-LOSS-CUM//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Direct Runoff" displayString="Direct Runoff" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/FLOW-DIRECT//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Baseflow" displayString="Baseflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//SK04_SFk McKenzie R/FLOW-BASE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+    </Hydrology>
+    <Sediment />
+    <WaterQuality />
+    <Statistics>
+      <StatisticMeasure type="Inflow Minimum" displayString="Minimum Inflow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Inflow Minimum Time" displayString="Time of Minimum Inflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Inflow Maximum" displayString="Maximum Inflow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Inflow Maximum Time" displayString="Time of Maximum Inflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Inflow Volume" displayString="Inflow Volume" value="0.0000000" units="AC-FT" />
+      <StatisticMeasure type="Inflow Depth" displayString="Inflow Depth" value="0.0000000" units="IN" />
+      <StatisticMeasure type="Inflow Average" displayString="Inflow Average" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum" displayString="Minimum Outflow" value="83.7986764" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum Time" displayString="Time of Minimum Outflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Outflow Maximum" displayString="Maximum Outflow" value="3932.3330154" units="CFS" />
+      <StatisticMeasure type="Outflow Maximum Time" displayString="Time of Maximum Outflow" value="04Jan3000, 21:30" />
+      <StatisticMeasure type="Outflow Volume" displayString="Outflow Volume" value="18440.5201360" units="AC-FT" />
+      <StatisticMeasure type="Outflow Depth" displayString="Outflow Depth" value="7.3254188" units="IN" />
+      <StatisticMeasure type="Outflow Average" displayString="Outflow Average" value="1037.4989244" units="CFS" />
+      <StatisticMeasure type="Direct Flow Minimum" displayString="Minimum Direct Flow" value="0.0000000" units="CFS" />
+      <StatisticMeasure type="Direct Flow Minimum Time" displayString="Time of Minimum Direct Flow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Direct Flow Maximum" displayString="Maximum Direct Flow" value="3662.1797906" units="CFS" />
+      <StatisticMeasure type="Direct Flow Maximum Time" displayString="Time of Maximum Direct Flow" value="04Jan3000, 21:30" />
+      <StatisticMeasure type="Direct Flow Volume" displayString="Direct Flow Volume" value="11649.8740065" units="AC-FT" />
+      <StatisticMeasure type="Direct Flow Depth" displayString="Direct Flow Depth" value="4.6278633" units="IN" />
+      <StatisticMeasure type="Direct Flow Average" displayString="Direct Flow Average" value="654.8826748" units="CFS" />
+      <StatisticMeasure type="Baseflow Minimum" displayString="Minimum Baseflow" value="71.8966229" units="CFS" />
+      <StatisticMeasure type="Baseflow Minimum Time" displayString="Time of Minimum Baseflow" value="07Jan3000, 23:15" />
+      <StatisticMeasure type="Baseflow Maximum" displayString="Maximum Baseflow" value="1447.0000208" units="CFS" />
+      <StatisticMeasure type="Baseflow Maximum Time" displayString="Time of Maximum Baseflow" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Baseflow Volume" displayString="Baseflow Volume" value="6790.6461294" units="AC-FT" />
+      <StatisticMeasure type="Baseflow Depth" displayString="Baseflow Depth" value="2.6975555" units="IN" />
+      <StatisticMeasure type="Baseflow Average" displayString="Baseflow Average" value="382.6162496" units="CFS" />
+      <StatisticMeasure type="Precipitation Maximum" displayString="Maximum Precipitation" value="0.0780209" units="IN" />
+      <StatisticMeasure type="Precipitation Maximum Time" displayString="Time of Maximum Precipitation" value="06Jan3000, 11:00" />
+      <StatisticMeasure type="Precipitation Total" displayString="Precipitation Total" value="8.1147731" units="IN" />
+      <StatisticMeasure type="Precipitation Volume" displayString="Precipitation Volume" value="20427.5878862" units="AC-FT" />
+      <StatisticMeasure type="Loss Maximum" displayString="Maximum Loss" value="0.0481069" units="IN" />
+      <StatisticMeasure type="Loss Maximum Time" displayString="Time of Maximum Loss" value="03Jan3000, 01:00" />
+      <StatisticMeasure type="Loss Total" displayString="Loss Total" value="7.2634112" units="IN" />
+      <StatisticMeasure type="Loss Volume" displayString="Loss Volume" value="18284.4262420" units="AC-FT" />
+      <StatisticMeasure type="Excess Maximum" displayString="Maximum Excess" value="0.0726474" units="IN" />
+      <StatisticMeasure type="Excess Maximum Time" displayString="Time of Maximum Excess" value="06Jan3000, 11:30" />
+      <StatisticMeasure type="Excess Total" displayString="Excess Total" value="4.6279116" units="IN" />
+      <StatisticMeasure type="Excess Volume" displayString="Excess Volume" value="11649.9957041" units="AC-FT" />
+      <StatisticMeasure type="LWASS Maximum" displayString="Maximum LWASS" value="0.0926275" units="IN" />
+      <StatisticMeasure type="LWASS Maximum Time" displayString="Time of Maximum LWASS" value="06Jan3000, 11:00" />
+      <StatisticMeasure type="LWASS Total" displayString="LWASS Total" value="11.8913228" units="IN" />
+      <StatisticMeasure type="LWASS Volume" displayString="LWASS Volume" value="29934.4232213" units="AC-FT" />
+      <StatisticMeasure type="SWE Maximum" displayString="Maximum SWE" value="23.8558510" units="IN" />
+      <StatisticMeasure type="SWE Maximum Time" displayString="Time of Maximum SWE" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="SWE Total" displayString="SWE Total" value="23.8558510" units="IN" />
+      <StatisticMeasure type="Air Temperature Minimum" displayString="Minimum Air Temperature" value="-3.8532019" units="" />
+      <StatisticMeasure type="Air Temperature Minimum Time" displayString="Time of Minimum Air Temperature" value="31Dec2999, 24:00" />
+      <StatisticMeasure type="Air Temperature Maximum" displayString="Maximum Air Temperature" value="5.9644670" units="" />
+      <StatisticMeasure type="Air Temperature Maximum Time" displayString="Time of Maximum Air Temperature" value="06Jan3000, 09:45" />
+    </Statistics>
+  </BasinElement>
+  <BasinElement name="CougarDam_Inflow" type="Junction">
+    <ExecutionTime>10Jun2024, 21:09:36</ExecutionTime>
+    <UnitSystem>English</UnitSystem>
+    <IsComputationPoint>No</IsComputationPoint>
+    <DrainageArea area="204.1" units="MI2" />
+    <FlowLink upstreamName="SK02_SFk McKenzie R" />
+    <FlowLink upstreamName="SK04_SFk McKenzie R" />
+    <Hydrology>
+      <TimeSeries>
+        <TimeSeriesType type="Outflow" displayString="Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//CougarDam_Inflow/FLOW//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Outflow" displayString="Cumulative Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//CougarDam_Inflow/FLOW-CUMULATIVE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Combined Inflow" displayString="Combined Inflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//CougarDam_Inflow/FLOW-COMBINE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+    </Hydrology>
+    <Sediment />
+    <WaterQuality />
+    <Statistics>
+      <StatisticMeasure type="Inflow Minimum" displayString="Minimum Inflow" value="439.9189824" units="CFS" />
+      <StatisticMeasure type="Inflow Minimum Time" displayString="Time of Minimum Inflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Inflow Maximum" displayString="Maximum Inflow" value="13130.9481808" units="CFS" />
+      <StatisticMeasure type="Inflow Maximum Time" displayString="Time of Maximum Inflow" value="04Jan3000, 23:45" />
+      <StatisticMeasure type="Inflow Volume" displayString="Inflow Volume" value="71358.3144010" units="AC-FT" />
+      <StatisticMeasure type="Inflow Depth" displayString="Inflow Depth" value="6.5554554" units="IN" />
+      <StatisticMeasure type="Inflow Average" displayString="Inflow Average" value="4014.5521214" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum" displayString="Minimum Outflow" value="439.9189824" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum Time" displayString="Time of Minimum Outflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Outflow Maximum" displayString="Maximum Outflow" value="13130.9481808" units="CFS" />
+      <StatisticMeasure type="Outflow Maximum Time" displayString="Time of Maximum Outflow" value="04Jan3000, 23:45" />
+      <StatisticMeasure type="Outflow Volume" displayString="Outflow Volume" value="71358.3144010" units="AC-FT" />
+      <StatisticMeasure type="Outflow Depth" displayString="Outflow Depth" value="6.5554554" units="IN" />
+      <StatisticMeasure type="Outflow Average" displayString="Outflow Average" value="4014.5521214" units="CFS" />
+    </Statistics>
+  </BasinElement>
+  <BasinElement name="Cougar" type="Reservoir">
+    <ExecutionTime>10Jun2024, 21:09:36</ExecutionTime>
+    <UnitSystem>English</UnitSystem>
+    <IsComputationPoint>No</IsComputationPoint>
+    <DrainageArea area="204.1" units="MI2" />
+    <FlowLink upstreamName="CougarDam_Inflow" />
+    <Hydrology>
+      <TimeSeries>
+        <TimeSeriesType type="Outflow" displayString="Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//Cougar/FLOW//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Cumulative Outflow" displayString="Cumulative Outflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//Cougar/FLOW-CUMULATIVE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Combined Inflow" displayString="Combined Inflow" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//Cougar/FLOW-COMBINE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Storage" displayString="Storage" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//Cougar/STORAGE//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+      <TimeSeries>
+        <TimeSeriesType type="Reservoir Elevation" displayString="Pool Elevation" />
+        <DssFileName>1996_Feb.dss</DssFileName>
+        <DssPathname>//Cougar/ELEVATION//15MIN/RUN:1996_Feb/</DssPathname>
+      </TimeSeries>
+    </Hydrology>
+    <Sediment />
+    <WaterQuality />
+    <Statistics>
+      <StatisticMeasure type="Inflow Minimum" displayString="Minimum Inflow" value="439.9189824" units="CFS" />
+      <StatisticMeasure type="Inflow Minimum Time" displayString="Time of Minimum Inflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Inflow Maximum" displayString="Maximum Inflow" value="13130.9481808" units="CFS" />
+      <StatisticMeasure type="Inflow Maximum Time" displayString="Time of Maximum Inflow" value="04Jan3000, 23:45" />
+      <StatisticMeasure type="Inflow Volume" displayString="Inflow Volume" value="71358.3144010" units="AC-FT" />
+      <StatisticMeasure type="Inflow Depth" displayString="Inflow Depth" value="6.5554554" units="IN" />
+      <StatisticMeasure type="Inflow Average" displayString="Inflow Average" value="4014.5521214" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum" displayString="Minimum Outflow" value="547.3745297" units="CFS" />
+      <StatisticMeasure type="Outflow Minimum Time" displayString="Time of Minimum Outflow" value="09Jan3000, 23:00" />
+      <StatisticMeasure type="Outflow Maximum" displayString="Maximum Outflow" value="6986.2686348" units="CFS" />
+      <StatisticMeasure type="Outflow Maximum Time" displayString="Time of Maximum Outflow" value="05Jan3000, 17:30" />
+      <StatisticMeasure type="Outflow Volume" displayString="Outflow Volume" value="74522.1873068" units="AC-FT" />
+      <StatisticMeasure type="Outflow Depth" displayString="Outflow Depth" value="6.8461101" units="IN" />
+      <StatisticMeasure type="Outflow Average" displayString="Outflow Average" value="4192.4675412" units="CFS" />
+      <StatisticMeasure type="Storage Minimum" displayString="Minimum Storage" value="39733.0061066" units="AC-FT" />
+      <StatisticMeasure type="Storage Minimum Time" displayString="Time of Minimum Storage" value="09Jan3000, 22:45" />
+      <StatisticMeasure type="Storage Maximum" displayString="Maximum Storage" value="51249.0377082" units="AC-FT" />
+      <StatisticMeasure type="Storage Maximum Time" displayString="Time of Maximum Storage" value="05Jan3000, 17:15" />
+      <StatisticMeasure type="Pool Elevation Minimum" displayString="Minimum Pool Elevation" value="1501.6734125" units="FT" />
+      <StatisticMeasure type="Pool Elevation Minimum Time" displayString="Time of Minimum Pool Elevation" value="09Jan3000, 22:45" />
+      <StatisticMeasure type="Pool Elevation Maximum" displayString="Maximum Pool Elevation" value="1534.6745676" units="FT" />
+      <StatisticMeasure type="Pool Elevation Maximum Time" displayString="Time of Maximum Pool Elevation" value="05Jan3000, 17:15" />
+    </Statistics>
+  </BasinElement>
+</RunResults>
+

@@ -1,0 +1,386 @@
+---
+title: "Willamette RRFT Results"
+author: "Dan"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: paper
+    code_folding: show
+    df_print: paged
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, 
+  warning = FALSE, 
+  message = FALSE,
+  fig.width = 8,
+  fig.height = 6,
+  fig.align = "center"
+)
+```
+
+## Summary 
+This R-markdown steps through the RRFT results for Cougar Dam, conducted as a part of the Willamette Basin Hydrologic Loading
+
+
+## Libraries & Setup
+The libraries below are loaded using the Pacman package. If the plot and out directories don't exist, they will be created later.
+```{r libraries, message = FALSE}
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+pacman::p_load(
+  tidyverse, ggplot2, scales, ggh4x, ggrepel,patchwork,fs, 
+  ggsci, ggtext, glue, cli, assertthat, future, furrr, 
+  memoise,lubridate, purrr,zoo,
+  tcltk,grid,ggrepel,gt,here)
+
+theme_set(theme_bw())
+
+plotdir <- "/outputs/Figures/PF/"
+outdir <- "/outputs/PF/"
+```
+
+## Import RRFT Data
+
+### Distribution of Precipitation-Frequency Samples
+A 2023 analysis estimated the effective record length (ERL) and GEV distribution parameters using a parametric bootstrap of MSP data. The ERL and parameter estimation were input into RRFT as analytical distribution parameters. RRFT performed 1000 bootstrap realizations using these parameters and ERL to generate precipitation-frequency curves. The GEV curve from RRFT is shown in Figure 1.
+
+```{r - GEV PF Params, echo = FALSE}
+pf_data <- tibble(Location_xi = 6.49,
+                  Scale_alpha = 1.3,
+                  Shape_k = -0.06,
+                  ERL = 288)
+
+pf_gt <- pf_data %>%
+  gt() %>%
+  # Header
+  tab_header(
+    title = "72-Hour GEV Parameters",
+    subtitle = "Estimated from parameter bootstrap of MSP data"
+  ) %>%
+  # Column labels
+  cols_label(
+    Location_xi = "Location (xi)",
+    Scale_alpha = "Scale (alpha)",
+    Shape_k = "Shape (k)",
+    ERL = "ERL"
+  ) %>%
+  # Format peak flow with commas
+  fmt_number(
+    columns = c(Location_xi,Scale_alpha,Shape_k),
+    decimals = 2) %>%
+  # Alignment
+  cols_align(
+    align = "center",
+    columns = everything()
+  ) %>%
+  # Make column headers bold
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  ) %>%
+  # Table styling
+  tab_options(
+    table.font.size = px(11),
+    table.border.top.style = "solid",
+    table.border.top.width = px(2),
+    table.border.top.color = "#4a5f4a",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(2),
+    table.border.bottom.color = "#4a5f4a",
+    heading.background.color = "#4a5f4a",
+    heading.align = "left",
+    column_labels.background.color = "#e8e8e8",
+    data_row.padding = px(8),
+    column_labels.padding = px(8)
+  )
+
+pf_gt
+```
+
+```{r - GEV PF Curve, echo=FALSE, fig.cap = "Figure 1 - RRFT 3-day GEV PF Curve", fig.width = 8, fig.height = 5}
+pf72hr <- dir_ls("..", glob = "*Cougar_2023_GEV.csv*", recurse = TRUE) %>% read_csv()
+
+# Gumbel-variate ANEP
+pf72hr <- pf72hr %>% 
+  mutate(G_ANEP = -log(-log((1-AEP))),.before = everything())
+
+# Defined AEP breaks
+aep_breaks <- c(9e-1, 5e-1, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5, 1e-6, 1e-7, 1e-8, 1e-9, 1e-10)
+minor_aep_breaks <- unlist(lapply(2:9, function(i) i * 10^-(1:10)))
+
+Gumbel_ANEP_breaks <- -log(-log(1-aep_breaks))
+Gumbel_ANEP_breaks_minor <- -log(-log(1-minor_aep_breaks))
+
+# Plot
+pf_3day_gev <- ggplot(pf72hr, aes(x = G_ANEP)) +
+  geom_ribbon(aes(ymin = `Lower CI`, ymax = `Upper CI`), 
+              fill = "lightblue", alpha = 0.25) +
+  geom_line(aes(y = Expected, color = "Expected"), size = 1) +
+    geom_line(aes(y = Computed, color = "Computed"), size = 1) +
+  scale_color_manual(values = c("Expected" = "#BB0021FF",
+                                "Computed" = "#008B45FF"),
+                     breaks = c("Expected", "Computed"))+
+    scale_x_continuous(breaks = Gumbel_ANEP_breaks,
+                       minor_breaks = Gumbel_ANEP_breaks_minor,
+                       labels = aep_breaks) +
+  labs(x = "Annual Exceedance Probability",
+       y = "3-day Precipitation (inches)",
+       title = "RRFT 3-day GEV PF Curve",
+       subtitle = "95% CI Shown",
+       color = "") + 
+  theme(legend.position = "bottom") + 
+  geom_vline(xintercept = -log(-log(1 - c(1e-1,1e-2,1e-3,1e-4))),linetype = "dashed")
+
+print(pf_3day_gev)
+
+# Save with and without title
+ggsave(here("outputs", "Figures/PF", "RRFT_3dy_GEV.png"),
+       pf_3day_gev, width = 8, height = 5, dpi = 300)
+
+pf_3day_gev_notitle <- pf_3day_gev + theme(title = element_blank())
+ggsave(here("outputs", "Figures/PF", "RRFT_3dy_GEV_nontitle.png"),
+       pf_3day_gev_notitle, width = 8, height = 5, dpi = 300)
+```
+
+### Sampled Precipitation Quantiles
+The precipitation depths were sampled at four AEP values (0.1,0.01,0.001,0.0001) based on the results of the 1000 bootstrap realizations. The results of these samples have been displayed below.
+
+```{r precip quantile sampling, echo=FALSE}
+precip_quantiles <- dir_ls("..", glob = "*PrecipQuantiles_allAEP.csv*", recurse = TRUE) %>% read_csv()
+
+precip_quantiles <- precip_quantiles %>% 
+  mutate(Sample_AEP = factor(Sample_AEP,levels = c("AEP = 0.1","AEP = 0.01","AEP = 0.001","AEP = 0.0001")))
+
+# GT Sum Table
+precip_quantiles_sum <- precip_quantiles %>% 
+  group_by(Sample_AEP) %>% 
+  summarize(Mean = mean(Precip),
+            SD = sd(Precip),
+            Med = median(Precip),
+            Skew = moments::skewness(Precip),
+            Kurt = moments::kurtosis(Precip))
+
+precip_gt <- precip_quantiles_sum %>%
+  gt() %>%
+  # Header
+  tab_header(
+    title = "Precipitation Quantiles at Sampled AEPs") %>%
+  # Column labels
+  cols_label(
+    Sample_AEP = "Sampled AEP",
+    Mean = "Mea",
+    SD = "Std. Dev.",
+    Med = "Median",
+    Skew = "Skewness",
+    Kurt = "Kurtosis"
+  ) %>%
+  # Format peak flow with commas
+  fmt_number(
+    columns = c(Mean,SD,Med,Skew,Kurt),
+    decimals = 2) %>%
+  # Alignment
+  cols_align(
+    align = "center",
+    columns = everything()
+  ) %>%
+  # Make column headers bold
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  ) %>%
+  # Table styling
+  tab_options(
+    table.font.size = px(11),
+    table.border.top.style = "solid",
+    table.border.top.width = px(2),
+    table.border.top.color = "#4a5f4a",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(2),
+    table.border.bottom.color = "#4a5f4a",
+    heading.background.color = "#4a5f4a",
+    heading.align = "left",
+    column_labels.background.color = "#e8e8e8",
+    data_row.padding = px(8),
+    column_labels.padding = px(8)
+  )
+
+precip_gt
+
+# PLOTS
+precip_quantile_plots <- list(
+  precip_quantiles %>% 
+    filter(Sample_AEP == "AEP = 0.1") %>%
+    ggplot(aes(x = Precip)) +
+    geom_histogram(aes(y = after_stat(density)), 
+                   binwidth = 0.1, fill = "royalblue", color = "grey") +
+    labs(title = "AEP = 0.1", x = "Precip (in.)", y = "Relative Frequency")+
+    theme(title = element_text(size = 7,face = "bold")),
+  
+  precip_quantiles %>% 
+    filter(Sample_AEP == "AEP = 0.01") %>%
+    ggplot(aes(x = Precip)) +
+    geom_histogram(aes(y = after_stat(density)), 
+                   binwidth = 0.3, fill = "royalblue", color = "grey") +
+    labs(title = "AEP = 1E-02", x = "Precip (in.)", y = "Relative Frequency")+
+    theme(title = element_text(size = 7,face = "bold")),
+  
+  precip_quantiles %>% 
+    filter(Sample_AEP == "AEP = 0.001") %>%
+    ggplot(aes(x = Precip)) +
+    geom_histogram(aes(y = after_stat(density)), 
+                   binwidth = 0.6, fill = "royalblue", color = "grey") +
+    labs(title = "AEP = 1E-03", x = "Precip (in.)", y = "Relative Frequency")+
+    theme(title = element_text(size = 7,face = "bold")),
+  
+  precip_quantiles %>% 
+    filter(Sample_AEP == "AEP = 0.0001") %>%
+    ggplot(aes(x = Precip)) +
+    geom_histogram(aes(y = after_stat(density)), 
+                   binwidth = 1.3, fill = "royalblue", color = "grey") +
+    labs(title = "AEP = 1E-04", x = "Precip (in.)", y = "Relative Frequency")+
+    theme(title = element_text(size = 7,face = "bold")))
+
+# Combine with patchwork
+precip_quantiles <- wrap_plots(precip_quantile_plots, ncol = 2)
+ggsave(here("outputs", "Figures/PF", "RRFT_precip_quantiles.png"),
+       precip_quantiles, width = 8, height = 5, dpi = 300)
+
+print(precip_quantiles)
+```
+
+## RRFT Results
+
+The results of the rainfall-runoff modeling in RRFT are shown below.
+
+```{r precip quantile sampling, echo=FALSE}
+rrft_results <- dir_ls("..", glob = "*RRFT_Results_allAEP.csv*", recurse = TRUE) %>% read_csv()
+
+rrft_results <- rrft_results %>% 
+  mutate(Sample_AEP = case_when(
+    Sample_AEP == "AEP = 0.1" ~ "AEP = 1E-01",
+    Sample_AEP == "AEP = 0.01" ~ "AEP = 1E-02",
+    Sample_AEP == "AEP = 0.001" ~ "AEP = 1E-03",
+    Sample_AEP == "AEP = 0.0001" ~ "AEP = 1E-04",
+  )) %>% 
+  mutate(Sample_AEP = factor(Sample_AEP,levels = c("AEP = 1E-01","AEP = 1E-02","AEP = 1E-03","AEP = 1E-04")))
+
+# GT Sum Table
+rrft_results_sum <- rrft_results %>% 
+  group_by(Sample_AEP) %>% 
+  summarize(Mean = mean(Cougar_3day_inflow),
+            SD = sd(Cougar_3day_inflow),
+            Med = median(Cougar_3day_inflow),
+            Skew = moments::skewness(Cougar_3day_inflow),
+            Kurt = moments::kurtosis(Cougar_3day_inflow))
+
+rrft_gt <- rrft_results_sum %>%
+  gt() %>%
+  # Header
+  tab_header(
+    title = "RRFT Results at Sampled AEPs",
+    subtitle = "3-Day Inflow Results") %>%
+  # Column labels
+  cols_label(
+    Sample_AEP = "Sampled AEP",
+    Mean = "Mean",
+    SD = "Std. Dev.",
+    Med = "Median",
+    Skew = "Skewness",
+    #Kurt = "Kurtosis"
+  ) %>%
+  # Format peak flow with commas
+  fmt_number(
+    columns = c(Skew,Kurt),
+    decimals = 2) %>%
+  fmt_number(
+    columns = c(Mean,SD,Med),
+    decimals = 0) %>%
+  # Alignment
+  cols_align(
+    align = "center",
+    columns = everything()
+  ) %>%
+  # Make column headers bold
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels(everything())
+  ) %>%
+  # Table styling
+  tab_options(
+    table.font.size = px(11),
+    table.border.top.style = "solid",
+    table.border.top.width = px(2),
+    table.border.top.color = "#4a5f4a",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(2),
+    table.border.bottom.color = "#4a5f4a",
+    heading.background.color = "#4a5f4a",
+    heading.align = "left",
+    column_labels.background.color = "#e8e8e8",
+    data_row.padding = px(8),
+    column_labels.padding = px(8)
+  )
+
+rrft_gt
+
+# PLOTS
+rrft_plots <- ggplot(rrft_results, aes(x = Cougar_3day_inflow)) +
+  geom_histogram(aes(y = after_stat(count / sum(count))), 
+                 fill = "royalblue", color = "grey", bins = 30) +
+  facet_wrap(vars(Sample_AEP), scales = "free_y") +
+  scale_x_continuous(breaks = seq(0, 60000, 20000), 
+                     minor_breaks = seq(0, 60000, 5000),
+                     labels = scales::comma) +
+  scale_y_continuous() +
+  labs(x = "3-Day Inflow Volume (cfs)",
+       y = "Relative Frequency")
+
+ggsave(here("outputs", "Figures/PF", "RRFT_results.png"),
+       rrft_plots, width = 8, height = 5, dpi = 300)
+
+print(rrft_plots)
+```
+
+
+## Rainfall-Runoff Quantile Priors
+The theoretical quantile priors are shown below (for 1E-2 to 1E-4).
+
+```{r theoretical quant priors, echo = FALSE}
+quantile_priors <- tibble(
+  AEP = as.factor(c("1e-2","1e-3","1e-4")),
+  Mean = c(15400,22000,30000),
+  SD = c(2300,3800,6500))
+
+# Create curve
+quant_prior_curves <- quantile_priors %>%
+  rowwise() %>%
+  mutate(data = list(
+    data.frame(
+      x = seq(Mean - 4*SD, Mean + 4*SD, length.out = 200),
+      y = dnorm(seq(Mean - 4*SD, Mean + 4*SD, length.out = 200), Mean, SD)
+    ))) %>%
+  unnest(data)
+
+Q_prior_curves <- ggplot(quant_prior_curves) +
+  geom_line(aes(x = x, y = y, color = AEP),linewidth = 1) +
+  # geom_area(aes(x = x, y = y, group = AEP, fill = AEP), alpha = 0.5) +
+  labs(x = "3-Day Inflow Volume (cfs)", y = "Density") +
+  theme_bw()+
+  scale_x_continuous(breaks = seq(0,70000,10000),minor_breaks = seq(0,70000,5000),labels = scales::comma)+
+  scale_color_aaas() + 
+  annotate("text", x = 15400, y = 0.00017, label = "Q ~ N(15400, 2300)", color = "#3B4992FF", hjust = -0.15) +
+  annotate("text", x = 22000, y = 0.00011, label = "Q ~ N(22000, 3800)", color = "#EE0000FF", hjust = -0.15) +
+  annotate("text", x = 30000, y = 0.00007, label = "Q ~ N(30000, 6500)", color = "#008B45FF", hjust = -0.15)
+
+ggsave(here("outputs", "Figures/PF", "Theoret_Quantile_Prior.png"),
+       Q_prior_curves, width = 8, height = 5, dpi = 300)
+
+print(Q_prior_curves)
+```
+
+## Hyetographs
