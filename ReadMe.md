@@ -165,7 +165,7 @@ Publication-ready figures organized by analysis type:
 - **Stage_Frequency/** - Stage frequency analysis (future)
 - **Stage_POR/** - Period of record stage visualizations (hourly, daily, truncated)
 - **Systematic Inflow/** - AMS time series, ECDF, and combined plots
-- **Volume_Frequency/** - Paleological timelines, empirical AEP plots, time series
+- **Volume_Frequency/** - Paleo timelines, empirical AEP plots, time series
 - **Climate_Normal/** - Precipitation boxplots and ribbon plots
 
 ##### `outputs/Stage_POR/`
@@ -254,141 +254,69 @@ daniel.e.mcgraw@usace.army.mil
 ## R-project Tree
 Note recursive branches are shown selectively:
 
-├── data
-│   ├── Cougar
-│   │   ├── Peak_to_Vol
-│   │   │   ├── BestFit_paleo_3day.csv
-│   │   │   ├── Vida_3day_CGR_3day.csv
-│   │   │   └── Vida_peak_3day.csv
-│   │   ├── Crit_Duration
-│   │   │   ├── Dec-1964.csv
-│   │   │   ├── Jan-1996.csv
-│   │   │   ├── Jan-1995.csv
-│   │   │   ├── Dec-1999.csv
-│   │   │   └── HMS_Routing
-│   │   │       └── HMS_Routing.csv
-│   │   ├── Res_Model
-│   │   ├── Operations
-│   │   ├── Precip_Freq
-│   │   │   ├── RRFT
-│   │   │   │   ├── HMS
-│   │   │   │   │   ├── CGR_NoSnow.zip
-│   │   │   │   │   ├── CGR_Snow.zip
-│   │   │   │   │   ├── Cougar_RRFT_NoSnow
-│   │   │   │   │   ├── Cougar
-│   │   │   │   │   ├── Hyetographs
-│   │   │   │   │   ├── CGR_WRF.zip
-│   │   │   │   │   └── CGR_WRF
-│   │   │   │   ├── Precip_Quantiles
-│   │   │   │   │   ├── CGR_Quantiles_1E-3.csv
-│   │   │   │   │   ├── CGR_Quantiles_1E-1.csv
-│   │   │   │   │   ├── CGR_Quantiles_1E-2.csv
-│   │   │   │   │   ├── CGR_Quantiles_1E-4.csv
-│   │   │   │   │   └── PrecipQuantiles_allAEP.csv
-│   │   │   │   ├── Spreadsheet_Calcs
-│   │   │   │   └── RRFT_Results
-│   │   │   │       └── RRFT_Results_allAEP.csv
-│   │   │   └── Cougar_2023_GEV.csv
-│   │   ├── Stage_Data
-│   │   │   ├── AMS
-│   │   │   │   └── Cougar.csv
-│   │   │   ├── X_OLD
-│   │   │   └── Stage_Duration.csv
-│   │   ├── Inflow_Data
-│   │   │   └── Cougar_3day.csv
-│   │   ├── BestFit
-│   │   └── RFA
-│   ├── NWP
-│   │   ├── Reservoir_Data
-│   │   ├── Stage_POR
-│   │   └── BiOp
-│   ├── X_OLD_All_Sites_Stage_data
-│   ├── Climate
-│   │   └── Normals
-│   │       ├── climate_normals_summary_metric.csv
-│   │       ├── climate_normals_summary.csv
-│   │       └── climate_normals_summary_INCHES.csv
-│   └── GIS
-│       ├── PRISM
-│       │   ├── tmean_30yr_norm
-│       │   ├── PRISM_ppt_30yr_normal_800mM4_all_bil.zip
-│       │   ├── PRISM_tmean_30yr_normal_800mM5_all_bil.zip
-│       │   ├── ppt_30yr_norm
-│       │   └── clipped
-│       │       ├── ppt
-│       │       └── tmean
-│       ├── Willamette_HUC4.shp
-│       ├── Willamette_HUC4_10mile_buffer.shp
-│       ├── Willamette_HUC8.shp
-│       ├── Willamette_HUC10.shp
-│       ├── Willamette_Loading_Dams.shp
-│       ├── Willamette_USACE_Dams.shp
-│       └── USGS_30m_FT.tif
-├── archive_scripts
-│   ├── CGR_Packages.R
-│   ├── CGR_Precip.R
-│   ├── CGR_Res_Model.R
-│   ├── CGR_VFA_Input_Plots.R
-│   ├── CGR_VFA_Input_Plots_allen.R
-│   ├── Parallel_Processing_Example.R
-│   ├── Stage_data_POR.R
-│   ├── Vol_freq_figs_sensit.R
-│   ├── Willamette_Climate_Norms - Precip.R
-│   ├── Willamette_Climate_Norms - Temps.R
-│   ├── CGR_BestFit_Input.R
-│   ├── CGR_Crit_Duration.R
-│   ├── CGR_Elev_Stor.R
-│   ├── CGR_Guide_Curve.R
-│   └── JMD_Examples
-│       ├── RFA_Sensitivity.R
-│       ├── BestFit_Sensitivity.R
-│       ├── Report_Figures_PeakFlow_Regression.R
-│       ├── Peak_Flow_Regression.R
-│       ├── Stage_Duration_interctive.R
-│       ├── AMS_Source_of_Inflow.R
-│       ├── Annual Flood Seasonality.R
-│       ├── Critical Duration.R
-│       ├── Daily_Stage.R
-│       ├── Final_Stage_AEP_Table.R
-│       ├── HMS Routing - Critical Duration.R
-│       ├── JMD IPR.R
-│       ├── June1965_digitize.R
-│       ├── Paleo_AMS_Plotter.R
-│       ├── PMF Inflow Volume.R
-│       ├── Res_model.R
-│       └── Stage_Duration.R
-├── outputs
-│   ├── Figures
-│   │   ├── Peak_to_Vol
-│   │   ├── Systematic Inflow
-│   │   ├── Seasonality
-│   │   ├── Stage_Duration
-│   │   ├── Critical_Duration
-│   │   ├── Operations
-│   │   ├── ResModel
-│   │   ├── Volume_Frequency
-│   │   ├── Stage_Frequency
-│   │   ├── PF
-│   │   ├── Stage_POR
-│   │   └── Climate_Normal
-│   ├── Stage_POR
-│   └── Climate_Norms
-├── R_scripts
-│   ├── CGR_peak_to_vol.R
-│   ├── CGR_Crit_Duration.R
-│   ├── CGR_PrecipFreq.R
-│   ├── CGR_Seasonality.R
-│   ├── CGR_Stage_Duration.R
-│   ├── CGR_Guide_Curve.R
-│   ├── CGR_Elev_Stor.R
-│   ├── CGR_Packages.R
-│   ├── CGR_Res_Model.R
-│   ├── CGR_VFA_Input_Plots.R
-│   ├── CGR_Systematic Data Sources.R
-│   ├── RRFT_Results.Rmd
-│   ├── Stage_data_POR_and_BiOps.R
-│   ├── Willamette_Climate_Normals.R
-│   ├── Willamette_Climate_Norms - Temps.R
-│   └── Willamette_Climate_Norms - Precip.R
-├── Williamette_Loading.Rproj
-└── ReadMe.md
+Williamette_Loading/
+├── data/
+│   ├── Cougar/                      # Cougar Dam-specific data
+│   │   ├── BestFit/                 # RMC Best-Fit input data
+│   │   ├── Crit_Duration/           # Critical duration storm events
+│   │   ├── Inflow_Data/             # Systematic inflow records
+│   │   ├── Operations/              # Guide curves, flood levels, reservoir stats
+│   │   ├── Peak_to_Vol/             # Peak flow to volume transformations
+│   │   ├── Precip_Freq/             # Precipitation-frequency analysis
+│   │   │   └── RRFT/                # RRFT results and HMS models
+│   │   │       ├── HMS/             # HEC-HMS model files
+│   │   │       ├── Precip_Quantiles/  # Bootstrap quantiles (0.1%-10% AEP)
+│   │   │       ├── RRFT_Results/    # Final volume-frequency results
+│   │   │       └── Spreadsheet_Calcs/  # Upper/lower bounds
+│   │   ├── RFA/                     # Regional Frequency Analysis
+│   │   ├── Res_Model/               # Reservoir routing models
+│   │   └── Stage_Data/              # Historical stage records and AMS
+│   │
+│   ├── NWP/                         # Portland District data
+│   │   ├── BiOp/                    # Biological Opinion operations
+│   │   ├── Reservoir_Data/          # System-wide Willamette operations info
+│   │   └── Stage_POR/               # Period of record stage (hourly/daily)
+│   │
+│   ├── Climate/                     # PRISM climate normals (1991-2020)
+│   │   └── Normals/
+│   │
+│   └── GIS/                         # Geospatial data
+│       ├── PRISM/                   # Climate rasters (precipitation, temperature)
+│       └── *.shp                    # Basin boundaries and dam locations
+│
+├── R_scripts/                       # Active analysis scripts
+│   ├── CGR_Packages.R               # Package dependencies
+│   ├── CGR_Systematic Data Sources.R  # Data import
+│   ├── CGR_peak_to_vol.R            # Peak-volume transformations
+│   ├── CGR_Crit_Duration.R          # Critical duration analysis
+│   ├── CGR_Seasonality.R            # Flood seasonality
+│   ├── CGR_Stage_Duration.R         # Stage duration curves
+│   ├── CGR_VFA_Input_Plots.R        # Volume frequency visualizations
+│   ├── CGR_PrecipFreq.R             # Precipitation-frequency analysis
+│   ├── CGR_Guide_Curve.R            # Operational guide curves
+│   ├── CGR_Elev_Stor.R              # Elevation-storage relationships
+│   ├── CGR_Res_Model.R              # Reservoir routing models
+│   ├── RRFT_Results.Rmd             # RRFT documentation (R Markdown)
+│   ├── Stage_data_POR_and_BiOps.R   # POR stage processing
+│   └── Willamette_Climate_Normals.R # Climate normal processing
+│
+├── archive_scripts/                 # Legacy scripts (Summer 2023)
+│   └── JMD_Examples/                # Reference examples from previous analyses
+│
+├── outputs/
+│   ├── Figures/                     # Publication-ready figures
+│   │   ├── Critical_Duration/
+│   │   ├── Operations/
+│   │   ├── Peak_to_Vol/
+│   │   ├── PF/                      # Precipitation-frequency
+│   │   ├── ResModel/
+│   │   ├── Seasonality/
+│   │   ├── Stage_Duration/
+│   │   ├── Stage_POR/
+│   │   ├── Systematic Inflow/
+│   │   └── Volume_Frequency/
+│   │
+│   └── Stage_POR/                   # Processed stage data (CSV)
+│
+├── Williamette_Loading.Rproj        # R Project file
+└── ReadMe.md                        # Project documentation
