@@ -24,7 +24,7 @@ ngvd29_to_navd88 <- function(ngvd29){
 }
 
 # Stage Duration Data ----------------------------------------------------------
-stage_duration <- dir_ls("data/Cougar/",glob = "*Stage_Duration.csv*",recurse = T) %>% read_csv()
+stage_duration <- dir_ls("data/Cougar/",glob = "*Stage_Duration.csv",recurse = T) %>% read_csv()
 
 stage_duration_long <- stage_duration %>% 
   pivot_longer(cols = -Probability, names_to = "Month", values_to = "Elev")

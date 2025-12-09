@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+
+
+</head>
+<body>
+<div id="bpecflyrun" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+  <style>#bpecflyrun table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#bpecflyrun thead, #bpecflyrun tbody, #bpecflyrun tfoot, #bpecflyrun tr, #bpecflyrun td, #bpecflyrun th {
+  border-style: none;
+}
+
+#bpecflyrun p {
+  margin: 0;
+  padding: 0;
+}
+
+#bpecflyrun .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #4A5F4A;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #4A5F4A;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#bpecflyrun .gt_title {
+  color: #FFFFFF;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#bpecflyrun .gt_subtitle {
+  color: #FFFFFF;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#bpecflyrun .gt_heading {
+  background-color: #4A5F4A;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_col_heading {
+  color: #333333;
+  background-color: #E8E8E8;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#bpecflyrun .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #E8E8E8;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#bpecflyrun .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#bpecflyrun .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#bpecflyrun .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#bpecflyrun .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#bpecflyrun .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#bpecflyrun .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bpecflyrun .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#bpecflyrun .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#bpecflyrun .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#bpecflyrun .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bpecflyrun .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#bpecflyrun .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#bpecflyrun .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#bpecflyrun .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bpecflyrun .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#bpecflyrun .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bpecflyrun .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#bpecflyrun .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bpecflyrun .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bpecflyrun .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bpecflyrun .gt_left {
+  text-align: left;
+}
+
+#bpecflyrun .gt_center {
+  text-align: center;
+}
+
+#bpecflyrun .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#bpecflyrun .gt_font_normal {
+  font-weight: normal;
+}
+
+#bpecflyrun .gt_font_bold {
+  font-weight: bold;
+}
+
+#bpecflyrun .gt_font_italic {
+  font-style: italic;
+}
+
+#bpecflyrun .gt_super {
+  font-size: 65%;
+}
+
+#bpecflyrun .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#bpecflyrun .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#bpecflyrun .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#bpecflyrun .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#bpecflyrun .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#bpecflyrun .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#bpecflyrun .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#bpecflyrun .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#bpecflyrun div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="8" class="gt_heading gt_title gt_font_normal" style><span class='gt_from_md'><strong>Cougar Dam Critical Elevations</strong></span></td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="8" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Associated AEPs from 2025 and 2018 Stage-Frequency Estimates</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Level">Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Elev_29">Elev-NGVD29</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="Elev_88">Elev-NAVD88</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rfa_2025_AEPs">AEP: 2025</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rfa_2018_AEPs">AEP: 2018</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="OOM_Shift">Order of Magnitude Shift from 2018</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rfa_2025_RTs">1/Yrs: 2025</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rfa_2018_RTs">1/Yrs: 2018</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Level" class="gt_row gt_center">PMF</td>
+<td headers="Elev_29" class="gt_row gt_center">1,705.8</td>
+<td headers="Elev_88" class="gt_row gt_center">1,710.2</td>
+<td headers="rfa_2025_AEPs" class="gt_row gt_center">2.21E−06</td>
+<td headers="rfa_2018_AEPs" class="gt_row gt_center">1.72E−08</td>
+<td headers="OOM_Shift" class="gt_row gt_center">−2.11</td>
+<td headers="rfa_2025_RTs" class="gt_row gt_center">452,902</td>
+<td headers="rfa_2018_RTs" class="gt_row gt_center">57,983,406</td></tr>
+    <tr><td headers="Level" class="gt_row gt_center">Top of Dam</td>
+<td headers="Elev_29" class="gt_row gt_center">1,705.0</td>
+<td headers="Elev_88" class="gt_row gt_center">1,709.4</td>
+<td headers="rfa_2025_AEPs" class="gt_row gt_center">2.47E−06</td>
+<td headers="rfa_2018_AEPs" class="gt_row gt_center">3.07E−07</td>
+<td headers="OOM_Shift" class="gt_row gt_center">−0.90</td>
+<td headers="rfa_2025_RTs" class="gt_row gt_center">404,843</td>
+<td headers="rfa_2018_RTs" class="gt_row gt_center">3,252,077</td></tr>
+    <tr><td headers="Level" class="gt_row gt_center">Top of Spillway Gates</td>
+<td headers="Elev_29" class="gt_row gt_center">1,699.0</td>
+<td headers="Elev_88" class="gt_row gt_center">1,703.4</td>
+<td headers="rfa_2025_AEPs" class="gt_row gt_center">1.86E−04</td>
+<td headers="rfa_2018_AEPs" class="gt_row gt_center">1.26E−04</td>
+<td headers="OOM_Shift" class="gt_row gt_center">−0.17</td>
+<td headers="rfa_2025_RTs" class="gt_row gt_center">5,366</td>
+<td headers="rfa_2018_RTs" class="gt_row gt_center">7,910</td></tr>
+    <tr><td headers="Level" class="gt_row gt_center">Max. Con. Pool</td>
+<td headers="Elev_29" class="gt_row gt_center">1,690.0</td>
+<td headers="Elev_88" class="gt_row gt_center">1,694.4</td>
+<td headers="rfa_2025_AEPs" class="gt_row gt_center">5.62E−01</td>
+<td headers="rfa_2018_AEPs" class="gt_row gt_center">6.01E−01</td>
+<td headers="OOM_Shift" class="gt_row gt_center">0.03</td>
+<td headers="rfa_2025_RTs" class="gt_row gt_center">2</td>
+<td headers="rfa_2018_RTs" class="gt_row gt_center">2</td></tr>
+    <tr><td headers="Level" class="gt_row gt_center">Spillway Crest</td>
+<td headers="Elev_29" class="gt_row gt_center">1,656.8</td>
+<td headers="Elev_88" class="gt_row gt_center">1,661.1</td>
+<td headers="rfa_2025_AEPs" class="gt_row gt_center">9.05E−01</td>
+<td headers="rfa_2018_AEPs" class="gt_row gt_center">NA</td>
+<td headers="OOM_Shift" class="gt_row gt_center">NA</td>
+<td headers="rfa_2025_RTs" class="gt_row gt_center">1</td>
+<td headers="rfa_2018_RTs" class="gt_row gt_center">NA</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</body>
+</html>

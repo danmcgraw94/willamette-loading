@@ -13,7 +13,7 @@ theme_set(theme_light())
 plotdir <- "/outputs/Figures/Volume_Frequency/"
 
 # Read Data --------------------------------------------------------------------
-bf_input <- dir_ls("data/Cougar/",glob = "*CGR_3day_Input_Paleo_BB_nopsi.csv*",recurse = T) %>%
+bf_input <- dir_ls("data/Cougar/",glob = "*CGR_3day_Input_Paleo_ext_BB_nopsi.csv*",recurse = T) %>%
   read_csv()
 
 #pal_aaas("default")(10)
@@ -46,9 +46,9 @@ year_midpoint <- function(start_year,end_year){
 bf_input <- bf_input %>% mutate(DataLabel = ifelse(Datatype == "Threshold" & end_year <=1861, paste0("NEB: ", scales::comma(flow)," cfs"),""),
                                 Paleo_midpoint = ifelse(Datatype == "Threshold"& end_year <=1861,year_midpoint(start_year,end_year),NA))
 
-# remove the 5 year one:
-bf_input$DataLabel[bf_input$flow == 37000] <- ""
-bf_input$Paleo_midpoint[bf_input$flow == 37000] <- NA
+# # remove the 5 year one:
+# bf_input$DataLabel[bf_input$flow == 37000] <- ""
+# bf_input$Paleo_midpoint[bf_input$flow == 37000] <- NA
 
 #  -----------------------------------------------------------------------------
 # PALEO ERA --------------------------------------------------------------------
