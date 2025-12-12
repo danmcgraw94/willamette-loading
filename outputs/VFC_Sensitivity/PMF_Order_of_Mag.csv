@@ -1,18 +1,18 @@
 Analysis,Name,Sensitivity,AEP_PMF,PMF_OOM,OOM_Direction,Curve_Shift
-0a - CGR_3day_winter_paleo_best_RRFT_noPISBest_Ext,3-Day Final,Final,2.6194944467872183e-5,0,0x less frequent,Left
-1a - CGR_3day_winter_syst,3-Day Winter Syst,Record Length,1.8160760462737624e-4,-0.84,0.84x less frequent,Left
-1b - CGR_3day_winter_hist,3-Day Winter Syst + Hist,Record Length,1.3593109642928702e-4,-0.72,0.72x less frequent,Left
-1c - CGR_3day_winter_paleoOnly,3-Day Winter Syst + Hist + Paleo (w/PSIs),Record Length,2.601060125622112e-4,-1,1x less frequent,Left
-1d - CGR_3day_winter_precip_RRFT,3-Day Winter Syst + Hist + PF,Record Length,2.8044464663978808e-5,-0.03,0.03x less frequent,Left
-1e - CGR_3day_winter_paleoOnly_noPSI,3-Day Winter Syst + Hist + Paleo (no PSIs),Record Length,3.792091053111957e-5,-0.16,0.16x less frequent,Left
-2a - CGR_3day_annual_syst,3-Day Annual Syst,Seasonality,6.968874444224227e-5,-0.42,0.42x less frequent,Left
-2b - CGR_3day_annual_hist,3-Day Annual Syst + Hist,Seasonality,4.776317775845307e-5,-0.26,0.26x less frequent,Left
-4a - CGR_3day_winter_paleo_best_RRFT,3-Day Winter Syst + Hist + Paleo (w/PSIs) + PF,Paleoflood Application,8.203901436387717e-5,-0.5,0.5x less frequent,Left
-4b - CGR_3day_winter_paleo_best_RRFT_noPISBest,3-Day Winter Syst + Hist + Paleo (no PSIs) + PF,Paleoflood Application,1.8635901977037683e-5,0.15,0.15x more frequent,Right
-4c - CGR_3day_winter_paleo_younger_RRFT,3-Day Winter Syst + Hist + Paleo Young (w/PSIs) + PF,Paleoflood Application,9.861972926372697e-5,-0.58,0.58x less frequent,Left
-4d - CGR_3day_winter_paleo_older_RRFT,3-Day Winter Syst + Hist + Paleo Old (w/PSIs) + PF,Paleoflood Application,4.6272295162963495e-5,-0.25,0.25x less frequent,Left
-4e - CGR_3day_winter_paleo_best_RRFT_noPISUpper,3-Day Winter Syst + Hist + Paleo Upper Ext. (no PSIs) + PF,Paleoflood Application,3.0423560931414073e-5,-0.06,0.06x less frequent,Left
-4f - CGR_3day_winter_paleo_best_RRFT_noPISUp_Ext,3-Day Winter Syst + Hist + Paleo Upper (no PSIs) + PF,Paleoflood Application,3.304876300769255e-5,-0.1,0.1x less frequent,Left
-8a - CGR_3day_annual_syst_2018,3-Day Annual Syst (2018),Previous Analysis,9.375613478568301e-5,-0.55,0.55x less frequent,Left
-8b - CGR_3day_annual_hist_2018,3-Day Annual Syst + Hist (2018),Previous Analysis,3.233632128130104e-5,-0.09,0.09x less frequent,Left
-8c - CGR_3day_annual_PF_2018,3-Day Annual Syst + Hist + PF (Final - 2018),Previous Analysis,7.119565134650063e-5,-0.43,0.43x less frequent,Left
+0a - CGR_3day_winter_paleo_best_RRFT_noPISBest_Ext,3-Day Final,Final,2.78E-05,0,0x less frequent,Left
+1a - CGR_3day_winter_syst,3-Day Winter Syst,Record Length,1.82E-04,-0.81,0.81x less frequent,Left
+1b - CGR_3day_winter_hist,3-Day Winter Syst + Hist,Record Length,1.36E-04,-0.69,0.69x less frequent,Left
+1c - CGR_3day_winter_paleoOnly,3-Day Winter Syst + Hist + Paleo (w/PSIs),Record Length,2.60E-04,-0.97,0.97x less frequent,Left
+1d - CGR_3day_winter_precip_RRFT,3-Day Winter Syst + Hist + PF,Record Length,2.80E-05,0,0x less frequent,Left
+1e - CGR_3day_winter_paleoOnly_noPSI,3-Day Winter Syst + Hist + Paleo (no PSIs),Record Length,3.79E-05,-0.13,0.13x less frequent,Left
+2a - CGR_3day_annual_syst,3-Day Annual Syst,Seasonality,6.97E-05,-0.4,0.4x less frequent,Left
+2b - CGR_3day_annual_hist,3-Day Annual Syst + Hist,Seasonality,4.78E-05,-0.23,0.23x less frequent,Left
+4a - CGR_3day_winter_paleo_best_RRFT,3-Day Winter Syst + Hist + Paleo (w/PSIs) + PF,Paleoflood Application,8.20E-05,-0.47,0.47x less frequent,Left
+4b - CGR_3day_winter_paleo_best_RRFT_noPISBest,3-Day Winter Syst + Hist + Paleo (no PSIs) + PF,Paleoflood Application,1.88E-05,0.17,0.17x more frequent,Right
+4c - CGR_3day_winter_paleo_younger_RRFT,3-Day Winter Syst + Hist + Paleo Young (w/PSIs) + PF,Paleoflood Application,9.86E-05,-0.55,0.55x less frequent,Left
+4d - CGR_3day_winter_paleo_older_RRFT,3-Day Winter Syst + Hist + Paleo Old (w/PSIs) + PF,Paleoflood Application,4.63E-05,-0.22,0.22x less frequent,Left
+4e - CGR_3day_winter_paleo_best_RRFT_noPISUpper,3-Day Winter Syst + Hist + Paleo Upper Ext. (no PSIs) + PF,Paleoflood Application,3.22E-05,-0.06,0.06x less frequent,Left
+4f - CGR_3day_winter_paleo_best_RRFT_noPISUp_Ext,3-Day Winter Syst + Hist + Paleo Upper (no PSIs) + PF,Paleoflood Application,3.36E-05,-0.08,0.08x less frequent,Left
+8a - CGR_3day_annual_syst_2018,3-Day Annual Syst (2018),Previous Analysis,9.38E-05,-0.53,0.53x less frequent,Left
+8b - CGR_3day_annual_hist_2018,3-Day Annual Syst + Hist (2018),Previous Analysis,3.23E-05,-0.06,0.06x less frequent,Left
+8c - CGR_3day_annual_PF_2018,3-Day Annual Syst + Hist + PF (Final - 2018),Previous Analysis,7.12E-05,-0.41,0.41x less frequent,Left

@@ -52,6 +52,9 @@ rsconnect/
 # Large Data Files (Added for Willamette Project)
 # ====================
 
+# MSP Trend Rasters
+*trend_rasters_WRB.RData
+
 # HEC-HMS/DSS files (HUGE files)
 *.dss
 *.sqlite

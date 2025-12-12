@@ -7,26 +7,26 @@ simulation,nice_name,Sensitivity,TOD_Elev,AEP_TOD,TOD_OOM,OOM_Direction,Curve_Sh
 1e - stage_winter_paleoOnly_noPSI,3-Day Winter Syst + Hist + Paleo (no PSIs),Record Length,1709.38,3.385071429051756e-6,-0.14,0.14x less frequent,Left
 2a - stage_annual_syst_BestEstimate,3-Day Annual Syst,Inflow AMS Seasonality,1709.38,7.977987474760972e-6,-0.51,0.51x less frequent,Left
 2b - stage_annual_hist_BestEstimate,3-Day Annual Syst + Hist,Inflow AMS Seasonality,1709.38,3.8723408578578145e-6,-0.2,0.2x less frequent,Left
-3a - stage_winter_paleoNoPSIUpper_Debris_10P,10% Discharge Reduction from Debris,Reservoir Operations,1709.38,3.539215837511378e-6,-0.16,0.16x less frequent,Left
-3b- stage_winter_paleoNoPSIUpper_Debris_25P,25% Discharge Reduction from Debris,Reservoir Operations,1709.38,8.163799523730475e-6,-0.52,0.52x less frequent,Left
-3c - stage_winter_paleoNoPSIUpper_Debris_50P,50% Discharge Reduction from Debris,Reservoir Operations,1709.38,5.696542608779609e-5,-1.36,1.36x less frequent,Left
-3d - stage_winter_paleoNoPSIUpper_Debris_75P,75% Discharge Reduction from Debris,Reservoir Operations,1709.38,4.942069772826407e-4,-2.3,2.3x less frequent,Left
-3e - stage_winter_paleoNoPSIUpper_Debris_100P,100% Discharge Reduction from Debris,Reservoir Operations,1709.38,0.011298458845991566,-3.66,3.66x less frequent,Left
-3f - stage_winter_paleoNoPSIUpper_Debris_NoGates,No Gates Operated,Reservoir Operations,1709.38,0.012374124227643168,-3.7,3.7x less frequent,Left
-3g - stage_winter_paleoNoPSIUpper_DelayOps_BestEst,Delayed reservoir ops - best estimate discharge,Reservoir Operations,1709.38,7.720933031674093e-5,-1.49,1.49x less frequent,Left
-3h - stage_winter_paleoNoPSIUpper_DelayOps_Deb_10P,Delayed reservoir ops with 10% reduction from debris,Reservoir Operations,1709.38,8.630079794824663e-5,-1.54,1.54x less frequent,Left
-3i - stage_winter_paleoNoPSIUpper_DelayOps_Deb_25P,Delayed reservoir ops with 25% reduction from debris,Reservoir Operations,1709.38,9.999999999998899e-5,-1.61,1.61x less frequent,Left
-3j - stage_winter_paleoNoPSIUpper_DelayOps_Deb_50P,Delayed reservoir ops with 50% reduction from debris,Reservoir Operations,1709.38,1.4654995211071942e-4,-1.77,1.77x less frequent,Left
+3a - stage_winter_paleoNoPSIUpper_Debris_10P,10% Discharge Reduction from Debris,Discharge Capacity,1709.38,3.539215837511378e-6,-0.16,0.16x less frequent,Left
+3b- stage_winter_paleoNoPSIUpper_Debris_25P,25% Discharge Reduction from Debris,Discharge Capacity,1709.38,8.163799523730475e-6,-0.52,0.52x less frequent,Left
+3c - stage_winter_paleoNoPSIUpper_Debris_50P,50% Discharge Reduction from Debris,Discharge Capacity,1709.38,5.696542608779609e-5,-1.36,1.36x less frequent,Left
+3d - stage_winter_paleoNoPSIUpper_Debris_75P,75% Discharge Reduction from Debris,Discharge Capacity,1709.38,4.942069772826407e-4,-2.3,2.3x less frequent,Left
+3e - stage_winter_paleoNoPSIUpper_Debris_100P,100% Discharge Reduction from Debris,Discharge Capacity,1709.38,0.011298458845991566,-3.66,3.66x less frequent,Left
+3f - stage_winter_paleoNoPSIUpper_Debris_NoGates,No Gates Operated,Discharge Capacity,1709.38,0.012374124227643168,-3.7,3.7x less frequent,Left
+3g - stage_winter_paleoNoPSIUpper_DelayOps_BestEst,Delayed reservoir ops - best estimate discharge,Discharge Capacity,1709.38,7.720933031674093e-5,-1.49,1.49x less frequent,Left
+3h - stage_winter_paleoNoPSIUpper_DelayOps_Deb_10P,Delayed reservoir ops with 10% reduction from debris,Discharge Capacity,1709.38,8.630079794824663e-5,-1.54,1.54x less frequent,Left
+3i - stage_winter_paleoNoPSIUpper_DelayOps_Deb_25P,Delayed reservoir ops with 25% reduction from debris,Discharge Capacity,1709.38,9.999999999998899e-5,-1.61,1.61x less frequent,Left
+3j - stage_winter_paleoNoPSIUpper_DelayOps_Deb_50P,Delayed reservoir ops with 50% reduction from debris,Discharge Capacity,1709.38,1.4654995211071942e-4,-1.77,1.77x less frequent,Left
 4a - stage_winter_paleoBest_BestEstimate,3-Day Winter Syst + Hist + Paleo (w/PSIs) + PF,Paleoflood Application,1709.38,8.11684629620224e-6,-0.52,0.52x less frequent,Left
 4b - stage_winter_paleo_noPSIBest_BestEst,3-Day Winter Syst + Hist + Paleo (no PSIs) + PF,Paleoflood Application,1709.38,1.4198894728867373e-6,0.24,0.24x more frequent,Right
 4c - stage_winter_paleo_younger_RRFT,3-Day Winter Syst + Hist + Paleo Young (w/PSIs) + PF,Paleoflood Application,1709.38,1.4684783542162627e-5,-0.77,0.77x less frequent,Left
 4d - stage_winter_paleo_older_RRFT,3-Day Winter Syst + Hist + Paleo Old (w/PSIs) + PF,Paleoflood Application,1709.38,5.04717520244391e-6,-0.31,0.31x less frequent,Left
 4e - stage_winter_winter_paleo_best_RRFT_noPISUppe,3-Day Winter Syst + Hist + Paleo Upper (no PSIs) + PF,Paleoflood Application,1709.38,2.6358193624398396e-6,-0.03,0.03x less frequent,Left
 4f - stage_winter_paleo_paleo_best_RRFT_noPISUp_Ex,3-Day Winter Syst + Hist + Paleo Upper Ext.(no PSIs) + PF,Paleoflood Application,1709.38,2.659412399297345e-6,-0.03,0.03x less frequent,Left
-5a - stage_winter_paleo_noPSIUpper_BestEst_ExCon,Observed Stage (Full POR),Reservoir Guide Curve,1709.38,2.164357761458291e-6,0.06,0.06x more frequent,Right
-5b - stage_winter_paleo_noPSIUpper_BestEst_Injunct,Injunction Reservoir Conditions,Reservoir Guide Curve,1709.38,1.6945509320187568e-6,0.16,0.16x more frequent,Right
-5c - stage_winter_paleo_noPSIUpper_BestEst_NTOM,Near-Term BiOp ResSim POR,Reservoir Guide Curve,1709.38,1.8187019183990571e-6,0.13,0.13x more frequent,Right
-5d - stage_winter_paleo_noPSIUpper_BestEst_AT6,Long-Term BiOp ResSim POR,Reservoir Guide Curve,1709.38,1.4205877579831494e-6,0.24,0.24x more frequent,Right
+5a - stage_winter_paleo_noPSIUpper_BestEst_ExCon,Observed Stage (Full POR),Reservoir Operations,1709.38,2.164357761458291e-6,0.06,0.06x more frequent,Right
+5b - stage_winter_paleo_noPSIUpper_BestEst_Injunct,Injunction Reservoir Conditions,Reservoir Operations,1709.38,1.6945509320187568e-6,0.16,0.16x more frequent,Right
+5c - stage_winter_paleo_noPSIUpper_BestEst_NTOM,Near-Term BiOp ResSim POR,Reservoir Operations,1709.38,1.8187019183990571e-6,0.13,0.13x more frequent,Right
+5d - stage_winter_paleo_noPSIUpper_BestEst_AT6,Long-Term BiOp ResSim POR,Reservoir Operations,1709.38,1.4205877579831494e-6,0.24,0.24x more frequent,Right
 6a - stage_winter_syst_MaxCapacity,Max Capacity with Syst Record VFC,Maximum Discharge Capacity,1709.38,1.3673963928484412e-5,-0.74,0.74x less frequent,Left
 6b - stage_winter_PaleoNoPSIUppe_BestEst_MaxCap,Max Capacity with Final VFC,Maximum Discharge Capacity,1709.38,1.5660174094156432e-6,0.2,0.2x more frequent,Right
 7a - rain_winter_syst_BestEstimate,3-Day Winter Syst (Inflow-based Seasonality),Seasonality,1709.38,1.532342943733056e-5,-0.79,0.79x less frequent,Left
